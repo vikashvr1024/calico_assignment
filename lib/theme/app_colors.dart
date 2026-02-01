@@ -16,9 +16,8 @@ class AppColors {
   static const Color white = Colors.white;
 
   // Card Headers
-  // Card Headers
-  static const Color vaccinationBg = Color(0x338B5CF6); // #8B5CF6 20%
-  static const Color dewormingBg = Color(0x333B82F6); // #3B82F6 20%
+  static const Color vaccinationBg = Color(0x338B5CF6);
+  static const Color dewormingBg = Color(0x33529AE6);
 
   // Specific styling
   static const Color chipUnselectedBg = Colors.white;

@@ -72,7 +72,7 @@ class CustomHeader extends StatelessWidget {
                 style: const TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 14,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                   color: Color(0xFF000000),
                   height: 18 / 14, // 129%
                   letterSpacing: 0,

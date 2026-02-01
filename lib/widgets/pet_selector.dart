@@ -29,18 +29,21 @@ class PetSelector extends StatelessWidget {
           return GestureDetector(
             onTap: () => onPetSelected(index),
             child: Container(
-              width: isSelected ? 112 : 106, // Fixed widths from Figma
-              height: 34,
+              width: isSelected ? 112 : 106,
+              height: 40,
               padding: const EdgeInsets.symmetric(horizontal: 16),
               decoration: BoxDecoration(
                 color: isSelected
                     ? AppColors.darkGreen
-                    : const Color(0x4DDFDEFF),
+                    : const Color(
+                        0xFFF1F1F1,
+                      ), // Matches the light grey in screenshot
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
                   color: isSelected
-                      ? const Color(0xFFE4E5F0)
-                      : const Color(0x4DDFDEFF),
+                      ? AppColors.darkGreen
+                      : Colors
+                            .transparent, // No border for unselected in screenshot
                   width: 1,
                 ),
               ),

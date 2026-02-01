@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 
+import 'package:intl/intl.dart';
+
 class VaccineCard extends StatelessWidget {
   final String dateIssued;
   final String type; // Vaccination or Deworming
@@ -16,6 +18,16 @@ class VaccineCard extends StatelessWidget {
     required this.nextDueDate,
     required this.headerColor,
   });
+
+  String _formatDate(String dateStr) {
+    if (dateStr.isEmpty) return '';
+    try {
+      final dt = DateTime.parse(dateStr);
+      return DateFormat('dd.MM.yyyy').format(dt);
+    } catch (e) {
+      return dateStr; // Return as-is if not ISO format (e.g. already formatted)
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +50,11 @@ class VaccineCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 4.0),
               child: Text(
-                'Issued date: $dateIssued',
+                'Issued date: ${_formatDate(dateIssued)}',
                 style: const TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 13,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                   height: 18 / 13, // 138%
                   color: Color(0xFF000000),
                 ),
@@ -158,7 +170,7 @@ class VaccineCard extends StatelessWidget {
                             color: AppColors.white,
                           ),
                           child: Text(
-                            nextDueDate,
+                            _formatDate(nextDueDate),
                             textAlign: TextAlign.right,
                             style: const TextStyle(
                               fontFamily: 'Poppins',
