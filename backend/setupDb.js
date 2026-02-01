@@ -1,9 +1,8 @@
 const { Client } = require('pg');
-
-const connectionString = 'postgres://postgres:Vv098%40vikash@localhost:5432/postgres';
+require('dotenv').config();
 
 const client = new Client({
-    connectionString,
+    connectionString: process.env.SETUP_DATABASE_URL,
 });
 
 async function setup() {
@@ -24,7 +23,7 @@ async function setup() {
         // Now connect to 'calico' db to create tables
         const { Pool } = require('pg');
         const calicoPool = new Pool({
-            connectionString: 'postgres://postgres:Vv098%40vikash@localhost:5432/calico'
+            connectionString: process.env.DATABASE_URL
         });
 
         console.log("Creating tables...");

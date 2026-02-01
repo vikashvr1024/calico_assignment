@@ -37,10 +37,12 @@ Initially, the project used Google ML Kit for on-device OCR. To significantly im
 ### 1. Backend (Node.js + PostgreSQL)
 1.  Ensure **PostgreSQL** is installed and running.
 2.  Navigate to the `backend` directory.
-3.  Update `config/db.js` with your PostgreSQL credentials.
-4.  Add your `GEMINI_API_KEY` to the `.env` file in the `backend` folder.
-5.  Initialize the database: `node setupDb.js` (Creates tables and seeds initial pets).
-6.  Start the server: `node server.js`.
+3.  Add the following to your `.env` file in the `backend` folder:
+    -   `GEMINI_API_KEY`: Your Google Gemini API key.
+    -   `DATABASE_URL`: `postgres://user:password@localhost:5432/calico`
+    -   `SETUP_DATABASE_URL`: `postgres://user:password@localhost:5432/postgres` (Needed for initial setup).
+4.  Initialize the database: `node setupDb.js` (Creates tables and seeds initial pets).
+5.  Start the server: `node server.js`.
 
 ### 2. Frontend (Flutter)
 1.  Ensure you have the Flutter SDK installed.
