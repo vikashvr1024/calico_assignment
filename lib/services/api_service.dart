@@ -7,7 +7,7 @@ class ApiService {
   // Use 10.0.2.2 for Android emulator to access localhost
   // Use localhost for iOS simulator
   // Use your machine's IP for physical device
-  static const String baseUrl = 'http://10.112.122.51:3000/api';
+  static const String baseUrl = 'http://0.0.0.0:3000/api';
 
   Future<List<dynamic>> fetchPets() async {
     try {
