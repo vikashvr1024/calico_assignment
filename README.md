@@ -18,7 +18,7 @@ A premium, pixel-perfect Flutter application designed for managing pet vaccine v
 ### Backend
 - **Framework**: Node.js (Express)
 - **Database**: PostgreSQL (Primary server-side storage)
-- **AI/ML**: Google Gemini API (`gemini-2.0-flash`) for multi-modal document analysis.
+- **AI/ML**: Google Gemini API (`gemini-2.5-flash`) for multi-modal document analysis.
 - **Storage**: Local filesystem for persist uploaded vaccine images.
 
 ## 🧪 OCR / AI Approach
