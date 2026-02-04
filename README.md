@@ -24,7 +24,7 @@ A premium, pixel-perfect Flutter application designed for managing pet vaccine v
 ## 🧪 OCR / AI Approach
 Initially, the project used Google ML Kit for on-device OCR. To significantly improve accuracy and handle complex medical layouts, the system was migrated to a **Server-Side AI Analysis** model:
 1.  **Image Upload**: The mobile app uploads the document to the backend.
-2.  **Multimodal Analysis**: The backend invokes the Google Gemini Pro Vision model (`gemini-2.0-flash`).
+2.  **Multimodal Analysis**: The backend invokes the Google Gemini Pro Vision model (`gemini-2.5-flash`).
 3.  **Data Extraction**: The AI is prompted to return a structured JSON response containing:
     -   Type (Vaccination/Deworming)
     -   Vaccine Name
